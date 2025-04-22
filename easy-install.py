@@ -46,7 +46,7 @@ def cprint(*args, level: int = 1):
 def clone_frappe_docker_repo() -> None:
     try:
         urllib.request.urlretrieve(
-            "https://github.com/frappe/frappe_docker/archive/refs/heads/main.zip",
+            "https://github.com/saeesoftware/frappe_docker/archive/refs/heads/main.zip",
             "frappe_docker.zip",
         )
         logging.info("Downloaded frappe_docker zip file from GitHub")
@@ -377,7 +377,7 @@ def setup_dev_instance(project: str):
             check=True,
         )
         cprint(
-            "Please go through the Development Documentation: https://github.com/frappe/frappe_docker/tree/main/docs/development.md to fully complete the setup.",
+            "Please go through the Development Documentation: https://github.com/saeesoftware/frappe_docker/tree/main/docs/development.md to fully complete the setup.",
             level=2,
         )
         logging.info("Development Setup completed")
@@ -597,8 +597,8 @@ def add_build_parser(subparsers: argparse.ArgumentParser):
     parser.add_argument(
         "-r",
         "--frappe-path",
-        help="Frappe Repository to use, default: https://github.com/frappe/frappe",
-        default="https://github.com/frappe/frappe",
+        help="Frappe Repository to use, default: https://github.com/saeesoftware/frappe",
+        default="https://github.com/saeesoftware/frappe",
     )
     parser.add_argument(
         "-b",
